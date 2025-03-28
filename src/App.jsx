@@ -56,7 +56,7 @@ function App() {
         throw new Error("Please enter a valid USD to INR rate.");
       }
 
-      const baseAmount = rate * 25; 
+      const baseAmount = rate * 25;
 
       let bonusEligibleOdd, hedgeOdd, bonusEligibleTeam, otherTeam;
       if (Oa < Ob) {
@@ -334,7 +334,7 @@ function App() {
           </div>
         )}
         <div>
-          <p className="text-center text-white/90 mt-8 text-sm md:text-base">
+          <p className="text-center text-white/90 mt-8 md:text-xl text-lg">
             Made with ❤️ by{" "}
             <a
               href="https://github.com/alokvns48"
