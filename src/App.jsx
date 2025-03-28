@@ -18,7 +18,7 @@ function App() {
   const [oddB, setOddB] = useState("");
   const [teamA, setTeamA] = useState("Mumbai Indians");
   const [teamB, setTeamB] = useState("Chennai Super Kings");
-  const [usdRate, setUsdRate] = useState("82.50");
+  const [usdRate, setUsdRate] = useState("85.57");
   const [results, setResults] = useState(null);
   const [isCalculating, setIsCalculating] = useState(false);
   const [error, setError] = useState(null);
@@ -71,8 +71,8 @@ function App() {
         otherTeam = teamA;
       }
 
-      const x = baseAmount / bonusEligibleOdd;
-      const y = (bonusEligibleOdd / hedgeOdd) * x;
+      const x = Math.ceil(baseAmount / bonusEligibleOdd);
+      const y = Math.ceil((bonusEligibleOdd / hedgeOdd) * x);
       const totalStake = x + y;
 
       const normalOutcome = baseAmount - totalStake;
